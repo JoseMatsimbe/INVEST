@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
       minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Invest | Cadastros</title>
+  <title>Invest | Confirmacoes</title>
 
   <meta name="description" content="" />
 
@@ -155,6 +155,7 @@
           <li class="menu-header small text-uppercase"><span class="menu-header-text">Formularios</span></li>
           <!-- Forms -->
 
+
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-detail"></i>
@@ -174,18 +175,18 @@
                 </a>
               </li>
             </ul>
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a href="" class="menu-link menu-toggle">
               <i class="menu-icon tf-icons bx bx-detail"></i>
               <div data-i18n="">Gestao</div>
             </a>
             <ul class="menu-sub">
-              <li class="menu-item">
+              <li class="menu-">
                 <a href="" class="menu-link">
                   <div data-i18n="">Operadores
                   </div>
                 </a>
               </li>
-              <li class="menu-item">
+              <li class="menu-">
                 <a href="" class="menu-link">
                   <div data-i18n="">Confirmacoes
                   </div>
@@ -295,157 +296,108 @@
           <!-- Content -->
 
           <div class="container-xxl flex-grow-1 container-p-y">
-
-
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> Fundos e Empreendimentos</h4>
-
-              <!-- Fundos -->
-              <div class="row">
-                <div class="col-xl">
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <h5 class="mb-0">Fundos</h5>
-                    </div>
-                    <div class="card-body">
-                      <form>
-                        <div class="row">
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="">Titulo</label>
-                            <input type="text" class="form-control" id="" placeholder="John" />
-                          </div>
-
-                          <div class="mb-3 col-md-6">
-                            <label for="" class="form-label">Tipo</label>
-                            <select class="form-select" id="">
-                              <option>Selecione</option>
-                              <option value="1">Moveis</option>
-                              <option value="2">Transportes</option>
-                              <option value="3">etc</option>
-                            </select>
-                          </div>
-
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="basic-default-message">Detalhes</label>
-                            <textarea id="basic-default-message" class="form-control"
-                              placeholder="Detalhes..."></textarea>
-                          </div>
-
-
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="basic-default-message">Proprietario</label>
-                            <input type="text" class="form-control" id="" placeholder="Nome do proprietario" />
-                          </div>
-                          <div class="input-group mb-3 col-md-6">
-                            <input type="file" class="form-control" id="inputGroupFile04"
-                              aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
-                            <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">+</button>
-                          </div>
-                          <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Analise dos dados do Usuario</span></h4>
 
             <div class="row">
-              <div class="col-xl">
+              <div class="col-md-12">
+
                 <div class="card mb-4">
-                  <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0"> Empreendimentos</h5>
-                  </div>
+                  <h5 class="card-header">Detalhes</h5>
+                  <!-- Account -->
                   <div class="card-body">
-                    <form>
+                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                      <img src="../assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded" height="100"
+                        width="100" id="uploadedAvatar" />
+                      <div class="button-wrapper">
+                        <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                          <span class="d-none d-sm-block">Carregar fotografia</span>
+                          <i class="bx bx-upload d-block d-sm-none"></i>
+                          <input type="file" id="upload" class="account-file-input" hidden
+                            accept="image/png, image/jpeg" />
+                        </label>
+
+                        <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                          <i class="bx bx-reset d-block d-sm-none"></i>
+                          <span class="d-none d-sm-block">Reset</span>
+                        </button>
+
+                        <p class="text-muted mb-0">Formatos permitidos JPG, GIF or PNG. tamanho maximo de 800K</p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-0" />
+                  <div class="card-body">
+                    <form id="formAccountSettings" method="POST" onsubmit="return false">
                       <div class="row">
                         <div class="mb-3 col-md-6">
-                          <label class="form-label" for="">Titulo</label>
-                          <input type="text" class="form-control" id="" placeholder="John Doe" />
+                          <label for="username" class="form-label">Nome</label>
+                          <input disabled="disabled" type="text" class="form-control" id="username" name="username"
+                            placeholder="Nome" autofocus />
                         </div>
-
                         <div class="mb-3 col-md-6">
-                          <label for="" class="form-label">Tipo</label>
-                          <select class="form-select" id="">
-                            <option>Selecione</option>
-                            <option value="1">Moveis</option>
-                            <option value="2">Transportes</option>
-                            <option value="3">etc</option>
-                          </select>
+                          <label for="email" class="form-label">Email</label>
+                          <input disabled="disabled" type="text" class="form-control" id="email" name="email"
+                            placeholder="Email" />
                         </div>
-
                         <div class="mb-3 col-md-6">
-                          <label class="form-label" for="basic-default-message">Detalhes</label>
-                          <textarea id="basic-default-message" class="form-control"
-                            placeholder="Detalhes..."></textarea>
+                          <label for="" class="form-label">Numero do BI</label>
+                          <input disabled="disabled" type="text" class="form-control" id="" name=""
+                            placeholder="Numero de BI " autofocus />
                         </div>
-
                         <div class="mb-3 col-md-6">
-                          <label for="" class="form-label">fundo</label>
-                          <select class="form-select" id="">
-                            <option>Selecione</option>
-                            <option value="1">Fundo 1</option>
-                            <option value="2">Fundo 2</option>
-                            <option value="3">Fundo 3</option>
-                          </select>
+                          <label for="" class="form-label">Celular</label>
+                          <input disabled="disabled" type="text" class="form-control" id="" name=""
+                            placeholder="Contacto" autofocus />
                         </div>
-
                         <div class="mb-3 col-md-6">
-                          <label class="form-label" for="basic-default-message">Renda</label>
-                          <input type="text" class="form-control" id="" placeholder="Renda" />
+                          <label for="" class="form-label">Morada</label>
+                          <input disabled="disabled" type="text" class="form-control" id="" name=""
+                            placeholder="Morada" autofocus />
                         </div>
+                        <div class=" mb-3 col-md-6">
+                          <label for="" class="form-label">Carregar o Documento</label>
+                          <div class="input-group">
+                            <input type="file" class="form-control"
+                              aria-label="Text input with segmented dropdown button">
+                            <button type="button" class="btn btn-outline-primary">+</button>
+                            <button type="button"
+                              class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split show"
+                              data-bs-toggle="dropdown" aria-expanded="true">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end show"
+                              style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 41px, 0px);"
+                              data-popper-placement="bottom-end">
+                              <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                              <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                              <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        
 
-                        <div class="mb-3 col-md-6">
-                          <label for="" class="form-label">Tipo de renda</label>
-                          <select class="form-select" id="">
-                            <option>Selecione</option>
-                            <option value="1">Mensal</option>
-                            <option value="2">Diaria</option>
-                          </select>
-                        </div>
-
-                        <div class="mb-3 col-md-6">
-                          <label class="form-label" for="basic-default-message">Numero de Cotas</label>
-                          <input type="number" class="form-control" id="" placeholder="Cotas" />
-                        </div>
-
-                        <div class="mb-3 col-md-6">
-                          <label class="form-label" for="basic-default-message">Preco Cotas</label>
-                          <input type="number" class="form-control" id="" placeholder="Cotas" />
-                        </div>
-                        <div class="input-group mb-3 col-md-3">
-                          <input type="text" class="form-control" placeholder="Recipient's username"
-                            aria-describedby="button-addon2" />
-                          <button class="btn btn-outline-primary mb-3col-md-3" type="button"
-                            id="button-addon2">+</button>
-                        </div>
-                        <div class="input-group mb-3 col-md-6">
-                          <input type="file" class="form-control" id="inputGroupFile04"
-                            aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
-                          <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">+</button>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                      </div>
+                      <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Confirmar dados</button>
+                        <button type="reset" class="btn btn-danger">Anular dados</button>
                       </div>
                     </form>
                   </div>
+                  <!-- /Account -->
                 </div>
+
               </div>
             </div>
-
           </div>
+          <!-- / Content -->
+
+          <div class="content-backdrop fade"></div>
         </div>
-      <!-- / Content -->
-
+        <!-- / Content -->
+      </div>
+      <div class="content-backdrop fade"></div>
     </div>
-
-  </div>
-  </div>
-  <!-- / Content -->
-  </div>
-  <div class="content-backdrop fade"></div>
-  </div>
-  <!-- Content wrapper -->
+    <!-- Content wrapper -->
   </div>
   <!-- / Layout page -->
   </div>
